@@ -46,7 +46,7 @@ pipeline {
 
         stage("Deploy to GKE Cluster") {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: 'gke_the-retina-456908-a6_northamerica-northeast1_wanderlust-devsecops', contextName: 'gke_the-retina-456908-a6_northamerica-northeast1_wanderlust-devsecops', credentialsId: 'k8s-secret', namespace: 'devsecops', restrictKubeConfigAccess: false, serverUrl: 'https://35.222.130.69') {
+                withKubeConfig(caCertificate: '', clusterName: 'gke_the-retina-456908-a6_northamerica-northeast1_wanderlust-devsecops', contextName: 'gke_the-retina-456908-a6_northamerica-northeast1_wanderlust-devsecops', credentialsId: 'k8s-secret', namespace: 'devsecops', restrictKubeConfigAccess: false, serverUrl: 'https://34.118.142.133') {
                     script {
                         sh "kubectl apply -f ./kubernetes -n devsecops"
 
