@@ -8,5 +8,5 @@ spec:
   accessModes:
     - ReadWriteOnce
   gcePersistentDisk:
-    pdName: jenkins-server-1
+    pdName: pvc-54067faa-6d85-47e3-80b7-f512fad0859c
     fsType: ext4
